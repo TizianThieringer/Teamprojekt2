@@ -16,12 +16,36 @@ function make_slides(f) {
     }
   });
 
-  slides.exercise1 = slide({
-    name : "exercise1",
+slides.q1_1 = slide({
+    name : "q1_1",
     button : function() {
-      exp.go();
+      exp.go(); //use exp.go() if and only if there is no "present" data.
     }
   });
+slides.q1_2 = slide({
+    name : "q1_2",
+    button : function() {
+      exp.go(); //use exp.go() if and only if there is no "present" data.
+    }
+  });
+  slides.q1_3 = slide({
+      name : "q1_3",
+      button : function() {
+        exp.go(); //use exp.go() if and only if there is no "present" data.
+      }
+    });
+    slides.q1_4 = slide({
+        name : "q1_4",
+        button : function() {
+          exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+      });
+      slides.q1_5 = slide({
+          name : "q1_5",
+          button : function() {
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+          }
+        });
 
   slides.instructions2 = slide({
     name : "instructions2",
@@ -30,12 +54,38 @@ function make_slides(f) {
     }
   });
 
-  slides.exercise2 = slide({
-    name : "exercise2",
-    button : function() {
-      exp.go();
-    }
-  });
+  slides.q2_1 = slide({
+      name : "q2_1",
+      button : function() {
+        exp.go(); //use exp.go() if and only if there is no "present" data.
+      }
+    });
+  slides.q2_2 = slide({
+      name : "q2_2",
+      button : function() {
+        exp.go(); //use exp.go() if and only if there is no "present" data.
+      }
+    });
+    slides.q2_3 = slide({
+        name : "q2_3",
+        button : function() {
+          exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+      });
+      slides.q2_4 = slide({
+          name : "q2_4",
+          button : function() {
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+          }
+        });
+        slides.q2_5 = slide({
+            name : "q2_5",
+            button : function() {
+              exp.go(); //use exp.go() if and only if there is no "present" data.
+            }
+          });
+
+
 
   slides.instructions3 = slide({
     name : "instructions3",
@@ -44,13 +94,36 @@ function make_slides(f) {
     }
   });
 
-  slides.exercise3 = slide({
-    name : "exercise3",
-    button : function() {
-      exp.go();
-    }
-  });
-
+  slides.q3_1 = slide({
+      name : "q3_1",
+      button : function() {
+        exp.go(); //use exp.go() if and only if there is no "present" data.
+      }
+    });
+  slides.q3_2 = slide({
+      name : "q3_2",
+      button : function() {
+        exp.go(); //use exp.go() if and only if there is no "present" data.
+      }
+    });
+    slides.q3_3 = slide({
+        name : "q3_3",
+        button : function() {
+          exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+      });
+      slides.q3_4 = slide({
+          name : "q3_4",
+          button : function() {
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+          }
+        });
+        slides.q3_5 = slide({
+            name : "q3_5",
+            button : function() {
+              exp.go(); //use exp.go() if and only if there is no "present" data.
+            }
+          });
 
 
 
@@ -122,11 +195,11 @@ function init() {
   exp.structure=[
                 "i0",
                 "instructions",
-                "exercise1",
+				        "q1_1","q1_2", "q1_3", "q1_4", "q1_5",
 				        "instructions2",
-				        "exercise2",
+                "q2_1","q2_2", "q2_3", "q2_4", "q2_5",
                 "instructions3",
-                "exercise3",
+                "q3_1","q3_2", "q3_3", "q3_4", "q3_5",
                 'subj_info',
                 'thanks'
                 ];
@@ -154,98 +227,390 @@ function init() {
 }
 
 /// Hide&Show Q&R ///
-function hideR() {
-    var y = document.getElementById("scoreDIV");
-    var z = document.getElementById("continueDIV");
-    y.style.display = "none";
-    z.style.display = "none";
-}
-function hideQ_showR() {
+//function hideR() {
+//    var y = document.getElementById("scoreDIV");
+//    var z = document.getElementById("continueDIV");
+//    y.style.display = "none";
+//    z.style.display = "none";
+//}
+function hideQ_showR1_1() {
   var x = document.getElementById("questionDIV");
-  var y = document.getElementById("scoreDIV");
-  var z = document.getElementById("continueDIV");
+//  var y = document.getElementById("scoreDIV");
+//  var z = document.getElementById("continueDIV");
 
  x.style.display = "none";
- y.style.display = "block";
- z.style.display = "block";
+// y.style.display = "block";
+ //z.style.display = "block";
 
 }
-
-//for second quiz
-function hideR2() {
-	var y = document.getElementById("scoreDIV2");
-    var z = document.getElementById("continueDIV2");
-    y.style.display = "none";
-    z.style.display = "none";
-}
-function hideQ_showR2() {
-  var x = document.getElementById("questionDIV2");
-  var y = document.getElementById("scoreDIV2");
-  var z = document.getElementById("continueDIV2");
+function hideQ_showR1_2() {
+  var x = document.getElementById("questionDIV1_2");
 
  x.style.display = "none";
- y.style.display = "block";
- z.style.display = "block";
 
 }
-
-//for third quiz
-function hideR3() {
-	var y = document.getElementById("scoreDIV3");
-    var z = document.getElementById("continueDIV3");
-    y.style.display = "none";
-    z.style.display = "none";
-}
-function hideQ_showR3() {
-  var x = document.getElementById("questionDIV3");
-  var y = document.getElementById("scoreDIV3");
-  var z = document.getElementById("continueDIV3");
+function hideQ_showR1_3() {
+  var x = document.getElementById("questionDIV1_3");
 
  x.style.display = "none";
- y.style.display = "block";
- z.style.display = "block";
 
 }
+function hideQ_showR1_4() {
+  var x = document.getElementById("questionDIV1_4");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR1_5() {
+  var x = document.getElementById("questionDIV1_5");
+
+ x.style.display = "none";
+
+}
+
+
+// second exercise hide-function //
+function hideQ_showR2_1() {
+  var x = document.getElementById("questionDIV2_1");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR2_2() {
+  var x = document.getElementById("questionDIV2_2");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR2_3() {
+  var x = document.getElementById("questionDIV2_3");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR2_4() {
+  var x = document.getElementById("questionDIV2_4");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR2_5() {
+  var x = document.getElementById("questionDIV2_5");
+
+ x.style.display = "none";
+
+}
+
+// third exercise hide-function //
+function hideQ_showR3_1() {
+  var x = document.getElementById("questionDIV3_1");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR3_2() {
+  var x = document.getElementById("questionDIV3_2");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR3_3() {
+  var x = document.getElementById("questionDIV3_3");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR3_4() {
+  var x = document.getElementById("questionDIV3_4");
+
+ x.style.display = "none";
+
+}
+function hideQ_showR3_5() {
+  var x = document.getElementById("questionDIV3_5");
+
+ x.style.display = "none";
+
+}
+
+
+
+/// exercise 1 ///
+function myFunctionClick(){
+  var button = document.getElementById("showAnswer");
+   button.disabled = false;
+}
+function myFunctionClick1_2(){
+  var button = document.getElementById("showAnswer1_2");
+   button.disabled = false;
+}
+function myFunctionClick1_3(){
+  var button = document.getElementById("showAnswer1_3");
+   button.disabled = false;
+}
+function myFunctionClick1_4(){
+  var button = document.getElementById("showAnswer1_4");
+   button.disabled = false;
+}
+function myFunctionClick1_5(){
+  var button = document.getElementById("showAnswer1_5");
+   button.disabled = false;
+}
+var Score = 0;
+function myFunctionAnswer1_1() {
+  var answer = document.getElementById("D: ORATION is to CHAT as BANQUET is to snack");
+  var cont = document.getElementById("continue");
+
+  if (answer.checked == true){
+    text1_1.style.display = "block";
+	Score = Score + 1;
+  } else {
+     textf1_1.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer1_2(){
+	var answer = document.getElementById("C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant");
+  var cont = document.getElementById("continue1_2");
+
+  if (answer.checked == true){
+    text1_2.style.display = "block";
+	Score = Score + 1;
+  } else {
+     textf1_2.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer1_3(){
+	var answer = document.getElementById("C: WHEAT is to FLOUR as GRAPE is to wine");
+  var cont = document.getElementById("continue1_3");
+
+  if (answer.checked == true){
+    text1_3.style.display = "block";
+	Score = Score + 1;
+  } else {
+     textf1_3.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer1_4(){
+	var answer = document.getElementById("D: COMMON is to IRON as RARE is to diamond");
+  var cont = document.getElementById("continue1_4");
+
+  if (answer.checked == true){
+    text1_4.style.display = "block";
+	Score = Score + 1;
+  } else {
+     textf1_4.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer1_5(){
+	var answer = document.getElementById("D: VICTORY is to CONTEST as KNOWLEDGE is to study");
+  var cont = document.getElementById("continue1_5");
+
+  if (answer.checked == true){
+    text1_5.style.display = "block";
+	Score = Score + 1;
+  } else {
+     textf1_5.style.display = "block";
+  }
+  cont.disabled = false;
+}
+
+/// exercise 2 ///
+function myFunctionClick2_1(){
+  var button = document.getElementById("showAnswer2");
+   button.disabled = false;
+}
+function myFunctionClick2_2(){
+  var button = document.getElementById("showAnswer2_2");
+   button.disabled = false;
+}
+function myFunctionClick2_3(){
+  var button = document.getElementById("showAnswer2_3");
+   button.disabled = false;
+}
+function myFunctionClick2_4(){
+  var button = document.getElementById("showAnswer2_4");
+   button.disabled = false;
+}
+function myFunctionClick2_5(){
+  var button = document.getElementById("showAnswer2_5");
+   button.disabled = false;
+}
+var Score2 = 0;
+function myFunctionAnswer2_1() {
+  var answer = document.getElementById("B: STOVE:KITCHEN :: sink:bathroom");
+  var cont = document.getElementById("continue2");
+
+  if (answer.checked == true){
+    text2_1.style.display = "block";
+	Score2 = Score2 + 1;
+  } else {
+     textf2_1.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer2_2(){
+	var answer = document.getElementById("C: CELEBRATE:MARRIAGE :: lament:bereavement");
+  var cont = document.getElementById("continue2_2");
+
+  if (answer.checked == true){
+    text2_2.style.display = "block";
+	Score2 = Score2 + 1;
+  } else {
+     textf2_2.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer2_3(){
+	var answer = document.getElementById("C: MARIGARINE:BUTTER :: nylon:silk");
+  var cont = document.getElementById("continue2_3");
+
+  if (answer.checked == true){
+    text2_3.style.display = "block";
+	Score2 = Score2 + 1;
+  } else {
+     textf2_3.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer2_4(){
+	var answer = document.getElementById("B: NEGLIGENT:REQUIREMENT :: remiss: duty");
+  var cont = document.getElementById("continue2_4");
+
+  if (answer.checked == true){
+    text2_4.style.display = "block";
+	Score2 = Score2 + 1;
+  } else {
+     textf2_4.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer2_5(){
+	var answer = document.getElementById("C: GAZELLE:SWIFT :: swan:graceful");
+  var cont = document.getElementById("continue2_5");
+
+  if (answer.checked == true){
+    text2_5.style.display = "block";
+	Score2 = Score2 + 1;
+  } else {
+     textf2_5.style.display = "block";
+  }
+  cont.disabled = false;
+}
+
+
+/// exercise 3 ///
+function myFunctionClick3_1(){
+  var button = document.getElementById("showAnswer3");
+   button.disabled = false;
+}
+function myFunctionClick3_2(){
+  var button = document.getElementById("showAnswer3_2");
+   button.disabled = false;
+}
+function myFunctionClick3_3(){
+  var button = document.getElementById("showAnswer3_3");
+   button.disabled = false;
+}
+function myFunctionClick3_4(){
+  var button = document.getElementById("showAnswer3_4");
+   button.disabled = false;
+}
+function myFunctionClick3_5(){
+  var button = document.getElementById("showAnswer3_5");
+   button.disabled = false;
+}
+var Score3 = 0;
+function myFunctionAnswer3_1() {
+  var answer = document.getElementById("C: Option C");
+  var cont = document.getElementById("continue3");
+
+  if (answer.checked == true){
+    text3_1.style.display = "block";
+	Score3 = Score3 + 1;
+  } else {
+     textf3_1.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer3_2(){
+	var answer = document.getElementById("D: Option D");
+  var cont = document.getElementById("continue3_2");
+
+  if (answer.checked == true){
+    text3_2.style.display = "block";
+	Score3 = Score3 + 1;
+  } else {
+     textf3_2.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer3_3(){
+	var answer = document.getElementById("D: Option D");
+  var cont = document.getElementById("continue3_3");
+
+  if (answer.checked == true){
+    text3_3.style.display = "block";
+	Score3 = Score3 + 1;
+  } else {
+     textf3_3.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer3_4(){
+	var answer = document.getElementById("B: Option B");
+  var cont = document.getElementById("continue3_4");
+
+  if (answer.checked == true){
+    text3_4.style.display = "block";
+	Score3 = Score3 + 1;
+  } else {
+     textf3_4.style.display = "block";
+  }
+  cont.disabled = false;
+}
+function myFunctionAnswer3_5(){
+	var answer = document.getElementById("C: Option C");
+  var cont = document.getElementById("continue3_5");
+
+  if (answer.checked == true){
+    text3_5.style.display = "block";
+	Score3 = Score3 + 1;
+  } else {
+     textf3_5.style.display = "block";
+  }
+  cont.disabled = false;
+}
+
+
 
 /// Score ///
-var numQues = 10;
+var numQues = 5;
 var numChoi = 4;
-var answers = new Array(10);
+var answers = new Array(5);
 
 answers[0] = "D: ORATION is to CHAT as BANQUET is to snack";
 answers[1] = "C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant";
 answers[2] = "C: WHEAT is to FLOUR as GRAPE is to wine";
 answers[3] = "D: COMMON is to IRON as RARE is to diamond";
 answers[4] = "D: VICTORY is to CONTEST as KNOWLEDGE is to study";
-answers[5] = "B: DIAGNOSIS is to ANALYSIS as THESIS is to research";
-answers[6] = "B: MARE is to FILLY as KING is to prince";
-answers[7] = "C: ARMY is to RECRUIT as RELIGION is to convert";
-answers[8] = "A: OPULENCE is to LUXURY as POVERTY is to penury";
-answers[9] = "B: WILL is to CODICIL as CONSTITUTION is to amendment";
 
-var answers2 = new Array(10);
+var answers2 = new Array(5);
 answers2[0] = "B: STOVE:KITCHEN :: sink:bathroom";
 answers2[1] = "C: CELEBRATE:MARRIAGE :: lament:bereavement";
 answers2[2] = "C: MARIGARINE:BUTTER :: nylon:silk";
 answers2[3] = "B: NEGLIGENT:REQUIREMENT :: remiss: duty";
 answers2[4] = "C: GAZELLE:SWIFT :: swan:graceful";
-answers2[5] = "A: IGNOMINY:DISLOYALTY :: fame:heroism";
-answers2[6] = "D: SATURNINE:MERCURIAL :: crucial:trivial";
-answers2[7] = "C: ORANGE:MARMELADE :: tomatoes:ketchup";
-answers2[8] = "B: BANISHED:APOSTATE :: welcome:ally";
-answers2[9] = "D: CIRCLE:SPHERE :: wheel:orange";
 
-var answers3 = new Array(10);
+var answers3 = new Array(5);
 answers3[0] = "C: Option C";
 answers3[1] = "D: Option D";
 answers3[2] = "D: Option D";
 answers3[3] = "B: Option B";
 answers3[4] = "C: Option C";
-answers3[5] = "A: Option A";
-answers3[6] = "A: Option A";
-answers3[7] = "D: Step D";
-answers3[8] = "A: Option A";
-answers3[9] = "C: Option C";
 
 function getScore(form) {
   var score = 0;
