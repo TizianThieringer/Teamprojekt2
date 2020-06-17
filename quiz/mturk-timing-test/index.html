@@ -47,27 +47,26 @@
 	Study Information Sheet <br />
 	Quiz</p>
 	<div class = "scrollbox">
-    <p> In the following you will take part in three short quizzes. The first two are verbal analogies tasks containing 10 questions each. The second one is a computational thinking test also containing 10 questions. Before every quiz you will get instructions with examples that show you what to expect. Please read the instructions carefully. You will need approximately 15 minutes in total.</p>
-		<p id="legal">Legal information: By answering the following questions, you are participating in a study being performed by cognitive scientists at the University of T&uuml;bingen, Germany. If you have questions about this research, please contact A. Achimova at <a href="asya.achimova@uni-tuebingen.de">asya.achimova@uni-tuebingen.de</a>. You must be  at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</p>
+    <p> In the following you will take part in three short quiz. The first two are verbal analogies tasks containing 10 questions each. The second one is a computational thinking test also containing 10 questions. Before every quiz you will get instructions with examples that show you what to expect. Please read the instructions carfully. You will need approximately 10 minutes in total.</p>
+		<p id="legal">Legal information: By answering the following questions, you are participating in a study being performed by cognitive scientists in the University of T&uuml;bingen, Germany. If you have questions about this research, please contact A. Achimova at <a href="asya.achimova@uni-tuebingen.de">asya.achimova@uni-tuebingen.de</a>. You must be  at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</p>
 	</div>
     <button id="start_button" type="button">Continue</button>
 	<p> <br /> </p>
  </div>
-    
 
   <div class="slide" id="instructions">
     <h1>Verbal Analogies Quiz</h1>
     <h3>Instructions</h3>
-    <p align = "left">A verbal analogy question has four terms in two pairs. You are given the first complete pair, which establishes the relationship. You must then choose a pair of words whose relationship is <i>most</i> similar to the relationship in the given pair.
-        
+    <p align = "left">A verbal analogy question has four terms in two pairs. You are given the fist complete pair, which establishes the relationship. You must then choose a pair of words whose relationship is <i>most</i> similar to the relationship in the given pair.
+
         One type of verbal analogy question gives the first pair of words and the first half of the second pair, followed by a list of possible matches. This kind of question looks like this:</p>
-        
+
                             <p align = "center">CLOCK is to TIME as THERMOMETER is to</p>
-        
-        <p align = "left">The four answer choices are all single words. You must choose the one word that completes a relationship with thermometer that is analogous to the relationsship between clock and time.</p>
-      
+
+        <p align = "left">The four answer choices are all single words. You must choose the one pair that completes a relationship with thermometer that is analogous to the relationsship between clock and time.</p>
+
       <hr>
-      
+
       <p align = "left"><b>Example 1</b></p>
       <p align = "left"><b>1.</b> SPEEDOMETER is to POINTER as WATCH is to <br />
         <b>(A)</b> case <br />
@@ -76,7 +75,7 @@
         <b>(D)</b> numerals <br />
        </p>
       <p align = "left"><b>The correct answer is (B).</b> First consider what a <i>pointer</i> is used for on a <i>speedometer</i>. It indicates speed at a particular moment. A <i>watch</i> uses <i>hands</i> (choice B) for the same general function, that is, to indicate something at a particular moment. In this case, the hands indicate time. Choice (A), <i>case</i>, is incorrect because the watch case has nothing to do with this function. Choices (C), <i>dial</i>, and (D), <i>numerals</i>, are wrong because although the dial and the numbers have to do with indicating time, they don't perform the specific function of indicating something at any one particular moment.</p>
-      
+
       <p align = "left"><b>Example 2</b></p>
       <p align = "left"><b>2.</b> WINTER is to SUMMER as COLD is to <br />
         <b>(A)</b> wet <br />
@@ -86,186 +85,155 @@
        </p>
       <p align = "left"><b>The correct answer is (C).</b> <i>Winter</i> and <i>summer</i> are opposites, so you should look for an answer choice that means the opposite of <i>cold</i>.</p>
     <p> <br /> </p>
-    <button onclick="_s.button(); hideR()">Start the quiz</button>
+    <button onclick="_s.button()">Start the quiz</button>
       <p> <br /> </p>
   </div>
 
-  <div class="slide" id="exercise1">
-    <form name="quiz">
-    <div id = "questionDIV">
+ <div class="slide" id="q1_1">
+  <form name="q1_1">
+
     <p align = "left"><b>1.</b> ORATION is to CHAT as BANQUET is to <br />
         <b>(A)</b> festival <br />
         <b>(B)</b> party <br />
         <b>(C)</b> wedding <br />
         <b>(D)</b> snack <br />
        </p>
+	  <div id = "questionDIV">
         <ul style="margin-top: 1pt">
-            <input type="radio" name="q1" value="A: ORATION is to CHAT as BANQUET is to festival">A
-            <input type="radio" name="q1" value="B: ORATION is to CHAT as BANQUET is to party">B
-            <input type="radio" name="q1" value="C: ORATION is to CHAT as BANQUET is to wedding">C
-            <input type="radio" name="q1" value="D: ORATION is to CHAT as BANQUET is to snack">D
+            <input type="radio" name="q1" value="A: ORATION is to CHAT as BANQUET is to festival" onclick = "myFunctionClick()">A
+            <input type="radio" name="q1" value="B: ORATION is to CHAT as BANQUET is to party" onclick = "myFunctionClick()">B
+            <input type="radio" name="q1" value="C: ORATION is to CHAT as BANQUET is to wedding" onclick = "myFunctionClick()">C
+            <input type="radio" name="q1" id="D: ORATION is to CHAT as BANQUET is to snack" onclick = "myFunctionClick()">D
         </ul>
+		</div>
+	<p id="text1_1" style="display:none">Correct!</p>
+	<p id="textf1_1" style="display:none">No, the correct answer is D.</p>
+	<button type="button" id = "showAnswer" onclick="myFunctionAnswer1_1(),hideQ_showR1_1();" disabled = "disabled">Check Answer</button>
 
         <hr>
+
+  </form>
+  <button type = "button" id ="continue" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
+
+	 <div class="slide" id="q1_2">
+  <form name="q1_2">
+
     <p align = "left"><b>2.</b> INCLEMENT is to CLEAR as PERTINENT is to <br />
         <b>(A)</b> pert <br />
         <b>(B)</b> cloudy <br />
         <b>(C)</b> irrelevant <br />
         <b>(D)</b> perceptive <br />
        </p>
+      <div id = "questionDIV1_2">
         <ul style="margin-top: 1pt">
-            <input type="radio" name="q2" value="A: INCLEMENT is to CLEAR as PERTINENT is to pert">A
-            <input type="radio" name="q2" value="B: INCLEMENT is to CLEAR as PERTINENT is to cloudy">B
-            <input type="radio" name="q2" value="C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant">C
-            <input type="radio" name="q2" value="D: INCLEMENT is to CLEAR as PERTINENT is to perceptive">D
+            <input type="radio" name="q2" value="A: INCLEMENT is to CLEAR as PERTINENT is to pert" onclick = "myFunctionClick1_2()">A
+            <input type="radio" name="q2" value="B: INCLEMENT is to CLEAR as PERTINENT is to cloudy" onclick = "myFunctionClick1_2()">B
+            <input type="radio" name="q2" id="C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant" onclick = "myFunctionClick1_2()">C
+            <input type="radio" name="q2" value="D: INCLEMENT is to CLEAR as PERTINENT is to perceptive" onclick = "myFunctionClick1_2()">D
         </ul>
-
-        <hr>
-    <p align = "left"><b>3.</b>WHEAT is to FLOUR as GRAPE is to <br />
-        <b>(A)</b> vintage <br />
-        <b>(B)</b> vine <br />
-        <b>(C)</b> wine <br />
-        <b>(D)</b> fruit <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q3" value="A: WHEAT is to FLOUR as GRAPE is to vintage">A
-            <input type="radio" name="q3" value="B: WHEAT is to FLOUR as GRAPE is to vine">B
-            <input type="radio" name="q3" value="C: WHEAT is to FLOUR as GRAPE is to wine">C
-            <input type="radio" name="q3" value="D: WHEAT is to FLOUR as GRAPE is to fruit">D
-        </ul>
-
-        <hr>
-    <p align = "left"><b>4.</b> COMMON is to IRON as RARE is to <br />
-        <b>(A)</b> steak <br />
-        <b>(B)</b> crowd <br />
-        <b>(C)</b> humor <br />
-        <b>(D)</b> diamond <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q4" value="A: COMMON is to IRON as RARE is to steak">A
-            <input type="radio" name="q4" value="B: COMMON is to IRON as RARE is to crowd">B
-            <input type="radio" name="q4" value="C: COMMON is to IRON as RARE is to humor">C
-            <input type="radio" name="q4" value="D: COMMON is to IRON as RARE is to diamond">D
-        </ul>
-
-        <hr>
-    <p align = "left"><b>5.</b> VICTORY is to CONTEST as KNOWLEDGE is to <br />
-        <b>(A)</b> professor <br />
-        <b>(B)</b> test <br />
-        <b>(C)</b> degree <br />
-        <b>(D)</b> study <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q5" value="A: VICTORY is to CONTEST as KNOWLEDGE is to professor">A
-            <input type="radio" name="q5" value="B: VICTORY is to CONTEST as KNOWLEDGE is to test">B
-            <input type="radio" name="q5" value="C: VICTORY is to CONTEST as KNOWLEDGE is to degree">C
-            <input type="radio" name="q5" value="D: VICTORY is to CONTEST as KNOWLEDGE is to study">D
-        </ul>
-
-        <hr>
-    <p align = "left"><b>6.</b> DIAGNOSIS is to ANALYSIS as THESIS is to <br />
-        <b>(A)</b> antithesis <br />
-        <b>(B)</b> research <br />
-        <b>(C)</b> paper <br />
-        <b>(D)</b> college <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q6" value="A: DIAGNOSIS is to ANALYSIS as THESIS is to antithesis">A
-            <input type="radio" name="q6" value="B: DIAGNOSIS is to ANALYSIS as THESIS is to research">B
-            <input type="radio" name="q6" value="C: DIAGNOSIS is to ANALYSIS as THESIS is to paper">C
-            <input type="radio" name="q6" value="D: DIAGNOSIS is to ANALYSIS as THESIS is to college">D
-        </ul>
-
-        <hr>
-    <p align = "left"><b>7.</b> MARE is to FILLY as KING is to <br />
-        <b>(A)</b> throne <br />
-        <b>(B)</b> prince <br />
-        <b>(C)</b> queen <br />
-        <b>(D)</b> kingdom <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q7" value="A: MARE is to FILLY as KING is to throne">A
-            <input type="radio" name="q7" value="B: MARE is to FILLY as KING is to prince">B
-            <input type="radio" name="q7" value="C: MARE is to FILLY as KING is to queen">C
-            <input type="radio" name="q7" value="D: MARE is to FILLY as KING is to kingdom">D
-        </ul>
-
-        <hr>
-    <p align = "left"><b>8.</b> ARMY is to RECRUIT as RELIGION is to <br />
-        <b>(A)</b> priest <br />
-        <b>(B)</b> worshipper <br />
-        <b>(C)</b> convert <br />
-        <b>(D)</b> acolyte <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q8" value="A: ARMY is to RECRUIT as RELIGION is to priest">A
-            <input type="radio" name="q8" value="B: ARMY is to RECRUIT as RELIGION is to worshipper">B
-            <input type="radio" name="q8" value="C: ARMY is to RECRUIT as RELIGION is to convert">C
-            <input type="radio" name="q8" value="D: ARMY is to RECRUIT as RELIGION is to acolyte">D
-        </ul>
-
-        <hr>
-        <p align = "left"><b>9.</b> OPULENCE is to LUXURY as POVERTY is to <br />
-        <b>(A)</b> penury <br />
-        <b>(B)</b> misery <br />
-        <b>(C)</b> charity <br />
-        <b>(D)</b> hunger <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q9" value="A: OPULENCE is to LUXURY as POVERTY is to penury">A
-            <input type="radio" name="q9" value="B: OPULENCE is to LUXURY as POVERTY is to misery">B
-            <input type="radio" name="q9" value="C: OPULENCE is to LUXURY as POVERTY is to charity">C
-            <input type="radio" name="q9" value="D: OPULENCE is to LUXURY as POVERTY is to hunger">D
-        </ul>
+	     </div>
+	<p id="text1_2" style="display:none">Correct!</p>
+	<p id="textf1_2" style="display:none">No, the correct answer is C.</p>
+	<button type="button" id = "showAnswer1_2" onclick="myFunctionAnswer1_2(),hideQ_showR1_2();" disabled = "disabled">Check Answer</button>
 
         <hr>
 
-        <p align = "left"><b>10.</b> WILL is to CODICIL as CONSTITUTION is to <br />
-        <b>(A)</b> preamble <br />
-        <b>(B)</b> amendment <br />
-        <b>(C)</b> law <br />
-        <b>(D)</b> independence <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q10" value="A: WILL is to CODICIL as CONSTITUTION is to preamble">A
-            <input type="radio" name="q10" value="B: WILL is to CODICIL as CONSTITUTION is to amendment">B
-            <input type="radio" name="q10" value="C: WILL is to CODICIL as CONSTITUTION is to law">C
-            <input type="radio" name="q10" value="D: WILL is to CODICIL as CONSTITUTION is to independence">D
-        </ul>
+  </form>
+  <button type = "button" id ="continue1_2" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
 
-        <hr>
-        <p>Only click "Get score" if you have answered all the questions!</p>
-        <input type="button" value="Get score" onClick="hideQ_showR(); getScore(this.form)">
-        <p> <br /> </p>
-    </div>
-        <div id = "scoreDIV">
-        <p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
-            Correct answers:<br>
-            <textarea class="bgclr" name="solutions" wrap="virtual" rows="11" cols="70" disabled>
-            </textarea>
-            </p>
-         </div>
-         </form>
-      <div id = "continueDIV">
-       <button onclick="_s.button()">Continue</button>
-        <p> <br /> </p>
-      </div>
-    </div>
-    
+<div class="slide" id="q1_3">
+  <form name="q1_3">
+      <p align = "left"><b>3.</b>WHEAT is to FLOUR as GRAPE is to <br />
+          <b>(A)</b> vintage <br />
+          <b>(B)</b> vine <br />
+          <b>(C)</b> wine <br />
+          <b>(D)</b> fruit <br />
+         </p>
+         <div id = "questionDIV1_3">
+          <ul style="margin-top: 1pt">
+              <input type="radio" name="q3" value="A: WHEAT is to FLOUR as GRAPE is to vintage" onclick = "myFunctionClick1_3()">A
+              <input type="radio" name="q3" value="B: WHEAT is to FLOUR as GRAPE is to vine" onclick = "myFunctionClick1_3()">B
+              <input type="radio" name="q3" id="C: WHEAT is to FLOUR as GRAPE is to wine" onclick = "myFunctionClick1_3()">C
+              <input type="radio" name="q3" value="D: WHEAT is to FLOUR as GRAPE is to fruit" onclick = "myFunctionClick1_3()">D
+          </ul>
+   </div>
+   <p id="text1_3" style="display:none">Correct!</p>
+   <p id="textf1_3" style="display:none">No, the correct answer is C.</p>
+   <button type="button" id = "showAnswer1_3" onclick="myFunctionAnswer1_3(),hideQ_showR1_3();" disabled = "disabled">Check Answer</button>
+
+     <hr>
+
+   </form>
+   <button type = "button" id ="continue1_3" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
+
+<div class="slide" id="q1_4">
+  <form name="q1_4">
+      <p align = "left"><b>4.</b> COMMON is to IRON as RARE is to <br />
+          <b>(A)</b> steak <br />
+          <b>(B)</b> crowd <br />
+          <b>(C)</b> humor <br />
+          <b>(D)</b> diamond <br />
+         </p>
+         <div id = "questionDIV1_4">
+          <ul style="margin-top: 1pt">
+              <input type="radio" name="q4" value="A: COMMON is to IRON as RARE is to steak" onclick = "myFunctionClick1_4()">A
+              <input type="radio" name="q4" value="B: COMMON is to IRON as RARE is to crowd" onclick = "myFunctionClick1_4()">B
+              <input type="radio" name="q4" value="C: COMMON is to IRON as RARE is to humor" onclick = "myFunctionClick1_4()">C
+              <input type="radio" name="q4" id="D: COMMON is to IRON as RARE is to diamond" onclick = "myFunctionClick1_4()">D
+          </ul>
+   </div>
+   <p id="text1_4" style="display:none">Correct!</p>
+   <p id="textf1_4" style="display:none">No, the correct answer is D.</p>
+   <button type="button" id = "showAnswer1_4" onclick="myFunctionAnswer1_4(),hideQ_showR1_4();" disabled = "disabled">Check Answer</button>
+
+     <hr>
+
+   </form>
+   <button type = "button" id ="continue1_4" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
+
+<div class="slide" id="q1_5">
+  <form name="q1_5">
+      <p align = "left"><b>5.</b> VICTORY is to CONTEST as KNOWLEDGE is to <br />
+          <b>(A)</b> professor <br />
+          <b>(B)</b> test <br />
+          <b>(C)</b> degree <br />
+          <b>(D)</b> study <br />
+         </p>
+         <div id = "questionDIV1_5">
+          <ul style="margin-top: 1pt">
+              <input type="radio" name="q5" value="A: VICTORY is to CONTEST as KNOWLEDGE is to professor" onclick = "myFunctionClick1_5()">A
+              <input type="radio" name="q5" value="B: VICTORY is to CONTEST as KNOWLEDGE is to test" onclick = "myFunctionClick1_5()">B
+              <input type="radio" name="q5" value="C: VICTORY is to CONTEST as KNOWLEDGE is to degree" onclick = "myFunctionClick1_5()">C
+              <input type="radio" name="q5" id="D: VICTORY is to CONTEST as KNOWLEDGE is to study" onclick = "myFunctionClick1_5()">D
+          </ul>
+   </div>
+   <p id="text1_5" style="display:none">Correct!</p>
+   <p id="textf1_5" style="display:none">No, the correct answer is D.</p>
+   <button type="button" id = "showAnswer1_5" onclick="myFunctionAnswer1_5(),hideQ_showR1_5();" disabled = "disabled">Check Answer</button>
+   
+     <hr>
+
+   </form>
+   <button type = "button" id ="continue1_5" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
 
   <div class="slide" id="instructions2">
     <h1>Verbal Analogies Quiz 2</h1>
     <h3>Instructions</h3>
-    <p align = "left">Similar to the first quiz, a verbal analogy question has four terms in two pairs. In each question, the two capitalized words have a certain relationship to eachother. Select the letter of the pair of words that are related in the same way as the two capitalized words.
+    <p align = "left">Similar to the first quiz, A verbal analogy question has four terms in two pairs. In each question, the two capitalized words have a certain relationship to eachother. Select the letter of the pair of words that are related in the same way as the two capitalized words.
 
         One type of verbal analogy question gives the first pair of words, followed by a list of possible matches. This kind of question looks like this:</p>
 
-                            <p align = "center">INTIMIDATE:FEAR :: </p>
+                            <p align = "center">INTIMIDATE:FEAR ::  Answer: astonish:wonder</p>
 
-        <p align = "left">The four answer choices are all pair of words You must choose the one pair that has the most similar relationship as the given pair.</p>
-      
+        <p align = "left">The four answer choices are all pair of words.</p>
+
       <hr>
-      
+
       <p align = "left"><b>Example</b></p>
       <p align = "left"><b>1.</b> SPELLING : PUNCTUATION :: <br />
         <b>(A)</b> pajamas : fatigue <br />
@@ -274,193 +242,166 @@
         <b>(D)</b> biology : physics <br />
        </p>
       <p align = "left"><b>The correct answer is (D).</b> <i>Spelling</i> and <i>punctuation</i> are parts of the mechanics of English. Biology and physics are parts of the field of science. Therefore, the pair of words with the most analogous relationsship to the given pair is answer choice (D). In this type of question, it may help to substitute the colons for words when you read the question in your head. You would read the example like this: "Spelling is to punctuation as _______ is to _______."</p>
-      
+
     <p> <br /> </p>
-      
-    <button onclick="_s.button(),hideR2()">Start the quiz</button>
+
+    <button onclick="_s.button()">Start the quiz</button>
       <p> <br /> </p>
   </div>
 
-  <div class="slide" id="exercise2">
-    <form name="quiz">
-    <div id = "questionDIV2">
+  <div class="slide" id="q2_1">
+   <form name="q2_1">
+
      <p align = "left"><b>1.</b> STOVE:KITCHEN :: <br />
         <b>(A)</b> window:bedroom <br />
         <b>(B)</b> sink:bathroom <br />
         <b>(C)</b> television:living room <br />
         <b>(D)</b> trunk:attic <br />
        </p>
+       <div id = "questionDIV2_1">
         <ul style="margin-top: 1pt">
-            <input type="radio" name="q1" value="A: SPEEDOMETER is to POINTER as WATCH is to case">A
-            <input type="radio" name="q1" value="B: STOVE:KITCHEN :: sink:bathroom">B
-            <input type="radio" name="q1" value="C: SPEEDOMETER is to POINTER as WATCH is to dial">C
-            <input type="radio" name="q1" value="D: SPEEDOMETER is to POINTER as WATCH is to numerals">D
+            <input type="radio" name="q1" value="A: SPEEDOMETER is to POINTER as WATCH is to case" onclick = "myFunctionClick2_1()">A
+            <input type="radio" name="q1" id="B: STOVE:KITCHEN :: sink:bathroom" onclick = "myFunctionClick2_1()">B
+            <input type="radio" name="q1" value="C: SPEEDOMETER is to POINTER as WATCH is to dial" onclick = "myFunctionClick2_1()">C
+            <input type="radio" name="q1" value="D: SPEEDOMETER is to POINTER as WATCH is to numerals" onclick = "myFunctionClick2_1()">D
         </ul>
+ 		</div>
+ 	<p id="text2_1" style="display:none">Correct!</p>
+ 	<p id="textf2_1" style="display:none">No, the correct answer is B.</p>
+ 	<button type="button" id = "showAnswer2" onclick="myFunctionAnswer2_1(),hideQ_showR2_1();" disabled = "disabled">Check Answer</button>
+
+         <hr>
+
+   </form>
+   <button type = "button" id ="continue2" onclick="_s.button()" disabled = "disabled">Continue</button>
+ </div>
+
+ <div class="slide" id="q2_2">
+  <form name="q2_2">
+
+    <p align = "left"><b>2.</b> CELEBRATE:MARRIAGE :: <br />
+    <b>(A)</b> announce:birthday <br />
+    <b>(B)</b> report:injury <br />
+    <b>(C)</b> lament:bereavement <br />
+    <b>(D)</b> face:penalty <br />
+   </p>
+   <div id = "questionDIV2_2">
+    <ul style="margin-top: 1pt">
+        <input type="radio" name="q2" value="A: WINTER is to SUMMER as COLD is to wet" onclick = "myFunctionClick2_2()">A
+        <input type="radio" name="q2" value="B: WINTER is to SUMMER as COLD is to future" onclick = "myFunctionClick2_2()">B
+        <input type="radio" name="q2" id="C: CELEBRATE:MARRIAGE :: lament:bereavement" onclick = "myFunctionClick2_2()">C
+        <input type="radio" name="q2" value="D: WINTER is to SUMMER as COLD is to freezing" onclick = "myFunctionClick2_2()">D
+    </ul>
+   </div>
+ <p id="text2_2" style="display:none">Correct!</p>
+ <p id="textf2_2" style="display:none">No, the correct answer is C.</p>
+ <button type="button" id = "showAnswer2_2" onclick="myFunctionAnswer2_2(),hideQ_showR2_2();" disabled = "disabled">Check Answer</button>
 
         <hr>
 
-        <p align = "left"><b>2.</b> CELEBRATE:MARRIAGE :: <br />
-        <b>(A)</b> announce:birthday <br />
-        <b>(B)</b> report:injury <br />
-        <b>(C)</b> lament:bereavement <br />
-        <b>(D)</b> face:penalty <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q2" value="A: WINTER is to SUMMER as COLD is to wet">A
-            <input type="radio" name="q2" value="B: WINTER is to SUMMER as COLD is to future">B
-            <input type="radio" name="q2" value="C: CELEBRATE:MARRIAGE :: lament:bereavement">C
-            <input type="radio" name="q2" value="D: WINTER is to SUMMER as COLD is to freezing">D
-        </ul>
+  </form>
+  <button type = "button" id ="continue2_2" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
 
-        <hr>
-    <p align = "left"><b>3.</b> MARIGARINE:BUTTER ::<br />
-        <b>(A)</b> cream:milk <br />
-        <b>(B)</b> lace:cotton <br />
-        <b>(C)</b> nylon:silk <br />
-        <b>(D)</b> egg:chicken <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q3" value="A: ORATION is to CHAT as BANQUET is to festival">A
-            <input type="radio" name="q3" value="B: ORATION is to CHAT as BANQUET is to party">B
-            <input type="radio" name="q3" value="C: MARIGARINE:BUTTER :: nylon:silk">C
-            <input type="radio" name="q3" value="D: ORATION is to CHAT as BANQUET is to snack">D
-        </ul>
+<div class="slide" id="q2_3">
+ <form name="q2_3">
 
-        <hr>
-    <p align = "left"><b>4.</b> NEGLIGENT:REQUIREMENT :: <br />
-        <b>(A)</b> careful:position <br />
-        <b>(B)</b> remiss:duty <br />
-        <b>(C)</b> cautious:injury <br />
-        <b>(D)</b> cogent:task <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q4" value="A: INCLEMENT is to CLEAR as PERTINENT is to pert">A
-            <input type="radio" name="q4" value="B: NEGLIGENT:REQUIREMENT :: remiss: duty">B
-            <input type="radio" name="q4" value="C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant">C
-            <input type="radio" name="q4" value="D: INCLEMENT is to CLEAR as PERTINENT is to perceptive">D
-        </ul>
+   <p align = "left"><b>3.</b> MARIGARINE:BUTTER ::<br />
+       <b>(A)</b> cream:milk <br />
+       <b>(B)</b> lace:cotton <br />
+       <b>(C)</b> nylon:silk <br />
+       <b>(D)</b> egg:chicken <br />
+      </p>
+      <div id = "questionDIV2_3">
+       <ul style="margin-top: 1pt">
+           <input type="radio" name="q3" value="A: ORATION is to CHAT as BANQUET is to festival" onclick = "myFunctionClick2_3()">A
+           <input type="radio" name="q3" value="B: ORATION is to CHAT as BANQUET is to party" onclick = "myFunctionClick2_3()">B
+           <input type="radio" name="q3" id="C: MARIGARINE:BUTTER :: nylon:silk" onclick = "myFunctionClick2_3()">C
+           <input type="radio" name="q3" value="D: ORATION is to CHAT as BANQUET is to snack" onclick = "myFunctionClick2_3()">D
+       </ul>
+  </div>
+<p id="text2_3" style="display:none">Correct!</p>
+<p id="textf2_3" style="display:none">No, the correct answer is C.</p>
+<button type="button" id = "showAnswer2_3" onclick="myFunctionAnswer2_3(),hideQ_showR2_3();" disabled = "disabled">Check Answer</button>
 
-        <hr>
-    <p align = "left"><b>5.</b> GAZELLE:SWIFT:: <br />
-        <b>(A)</b> horse:slow <br />
-        <b>(B)</b> wolf:hungry <br />
-        <b>(C)</b> swan:graceful <br />
-        <b>(D)</b> elephant:gray <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q5" value="A: WHEAT is to FLOUR as GRAPE is to vintage">A
-            <input type="radio" name="q5" value="B: WHEAT is to FLOUR as GRAPE is to vine">B
-            <input type="radio" name="q5" value="C: GAZELLE:SWIFT :: swan:graceful">C
-            <input type="radio" name="q5" value="D: WHEAT is to FLOUR as GRAPE is to fruit">D
-        </ul>
+       <hr>
 
-        <hr>
-    <p align = "left"><b>6.</b> IGNOMINY:DISLOYALTY :: <br />
-        <b>(A)</b> fame:heroism <br />
-        <b>(B)</b> castigation:praise<br />
-        <b>(C)</b> death:victory <br />
-        <b>(D)</b> approbation:consecration <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q6" value="A: IGNOMINY:DISLOYALTY :: fame:heroism">A
-            <input type="radio" name="q6" value="B: COMMON is to IRON as RARE is to crowd">B
-            <input type="radio" name="q6" value="C: COMMON is to IRON as RARE is to humor">C
-            <input type="radio" name="q6" value="D: COMMON is to IRON as RARE is to diamond">D
-        </ul>
+ </form>
+ <button type = "button" id ="continue2_3" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
 
-        <hr>
-    <p align = "left"><b>7.</b> SATURNINE:MERCURIAL :: <br />
-        <b>(A)</b> Saturn:Venus <br />
-        <b>(B)</b> Apennines:Alps <br />
-        <b>(C)</b> redundant:wordy <br />
-        <b>(D)</b> crucial:trivial <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q7" value="A: VICTORY is to CONTEST as KNOWLEDGE is to professor">A
-            <input type="radio" name="q7" value="B: VICTORY is to CONTEST as KNOWLEDGE is to test">B
-            <input type="radio" name="q7" value="C: VICTORY is to CONTEST as KNOWLEDGE is to degree">C
-            <input type="radio" name="q7" value="D: SATURNINE:MERCURIAL :: crucial:trivial">D
-        </ul>
+<div class="slide" id="q2_4">
+ <form name="q2_4">
 
-        <hr>
-    <p align = "left"><b>8.</b> ORANGE:MARMELADE :: <br />
-        <b>(A)</b> potatoes:vegetable <br />
-        <b>(B)</b> jelly:jam <br />
-        <b>(C)</b> tomatoes:ketchup<br />
-        <b>(D)</b> cake:picnic <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q8" value="A: DIAGNOSIS is to ANALYSIS as THESIS is to antithesis">A
-            <input type="radio" name="q8" value="B: DIAGNOSIS is to ANALYSIS as THESIS is to research">B
-            <input type="radio" name="q8" value="C: ORANGE:MARMELADE :: tomatoes:ketchup">C
-            <input type="radio" name="q8" value="D: DIAGNOSIS is to ANALYSIS as THESIS is to college">D
-        </ul>
+   <p align = "left"><b>4.</b> NEGLIGENT:REQUIREMENT :: <br />
+       <b>(A)</b> careful:position <br />
+       <b>(B)</b> remiss:duty <br />
+       <b>(C)</b> cautious:injury <br />
+       <b>(D)</b> cogent:task <br />
+      </p>
+      <div id = "questionDIV2_4">
+       <ul style="margin-top: 1pt">
+           <input type="radio" name="q4" value="A: INCLEMENT is to CLEAR as PERTINENT is to pert" onclick = "myFunctionClick2_4()">A
+           <input type="radio" name="q4" id="B: NEGLIGENT:REQUIREMENT :: remiss: duty" onclick = "myFunctionClick2_4()">B
+           <input type="radio" name="q4" value="C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant" onclick = "myFunctionClick2_4()">C
+           <input type="radio" name="q4" value="D: INCLEMENT is to CLEAR as PERTINENT is to perceptive" onclick = "myFunctionClick2_4()">D
+       </ul>
+  </div>
+<p id="text2_4" style="display:none">Correct!</p>
+<p id="textf2_4" style="display:none">No, the correct answer is B.</p>
+<button type="button" id = "showAnswer2_4" onclick="myFunctionAnswer2_4(),hideQ_showR2_4();" disabled = "disabled">Check Answer</button>
 
-        <hr>
-    <p align = "left"><b>9.</b> BANISHED:APOSTATE :: <br />
-        <b>(A)</b> reward:traitor <br />
-        <b>(B)</b> welcome:ally <br />
-        <b>(C)</b> remove:result <br />
-        <b>(D)</b> avoid:truce <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q9" value="A: MARE is to FILLY as KING is to throne">A
-            <input type="radio" name="q9" value="B: BANISHED:APOSTATE :: welcome:ally">B
-            <input type="radio" name="q9" value="C: MARE is to FILLY as KING is to queen">C
-            <input type="radio" name="q9" value="D: MARE is to FILLY as KING is to kingdom">D
-        </ul>
+       <hr>
 
-        <hr>
-    <p align = "left"><b>10.</b> CIRCLE:SPHERE :: <br />
-        <b>(A)</b> square:cube <br />
-        <b>(B)</b> balloon:jet plane <br />
-        <b>(C)</b> heaven:hell <br />
-        <b>(D)</b> wheel:orange <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q10" value="A: ARMY is to RECRUIT as RELIGION is to priest">A
-            <input type="radio" name="q10" value="B: ARMY is to RECRUIT as RELIGION is to worshipper">B
-            <input type="radio" name="q10" value="C: ARMY is to RECRUIT as RELIGION is to convert">C
-            <input type="radio" name="q10" value="D: CIRCLE:SPHERE :: wheel:orange">D
-        </ul>
+ </form>
+ <button type = "button" id ="continue2_4" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
 
-        <hr>
-        <p>Only click "Get score" if you have answered all the questions!</p>
-        <input type="button" value="Get score" onClick="hideQ_showR2(); getScore1(form)">
-        <p> <br /> </p>
-    </div>
-        <div id = "scoreDIV2">
-        <p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
-            Correct answers:<br>
-            <textarea class="bgclr" name="solutions" wrap="virtual" rows="11" cols="70" disabled>
-            </textarea>
-            </p>
-         </div>
-    </form>
-      <div id = "continueDIV2">
-       <button onclick="_s.button()">Continue</button>
-          <p> <br /> </p>
-      </div>
-    </div>
-    
+<div class="slide" id="q2_5">
+ <form name="q2_5">
 
-  <div class="slide" id="instructions3">
+   <p align = "left"><b>5.</b> GAZELLE:SWIFT:: <br />
+       <b>(A)</b> horse:slow <br />
+       <b>(B)</b> wolf:hungry <br />
+       <b>(C)</b> swan:graceful <br />
+       <b>(D)</b> elephant:gray <br />
+      </p>
+      <div id = "questionDIV2_5">
+       <ul style="margin-top: 1pt">
+           <input type="radio" name="q5" value="A: WHEAT is to FLOUR as GRAPE is to vintage" onclick = "myFunctionClick2_5()">A
+           <input type="radio" name="q5" value="B: WHEAT is to FLOUR as GRAPE is to vine" onclick = "myFunctionClick2_5()">B
+           <input type="radio" name="q5" id="C: GAZELLE:SWIFT :: swan:graceful" onclick = "myFunctionClick2_5()">C
+           <input type="radio" name="q5" value="D: WHEAT is to FLOUR as GRAPE is to fruit" onclick = "myFunctionClick2_5()">D
+       </ul>
+  </div>
+<p id="text2_5" style="display:none">Correct!</p>
+<p id="textf2_5" style="display:none">No, the correct answer is C.</p>
+<button type="button" id = "showAnswer2_5" onclick="myFunctionAnswer2_5(),hideQ_showR2_5();" disabled = "disabled">Check Answer</button>
+
+       <hr>
+
+ </form>
+ <button type = "button" id ="continue2_5" onclick="_s.button()" disabled = "disabled">Continue</button>
+</div>
+
+
+    <div class="slide" id="instructions3">
       <h1>Computational Thinking Test</h1>
       <h3>Instructions</h3>
-      <p align = "left">In the following you will take part in a computational thinking test. Don't worry, to solve this you don't need any prior knowledge in computer science and programming. You will be given a picture with a main-character and a path which this character wants to follow. To the right of this picture there will be given four different options of instructions. One of those instructions will match the given scenario and this is the instruction you have to find.</p>
-        
+      <p align = "left">In the following you will take part in a computational thinking test. Don't worry to solve this you don't need any prior knowledge in computer science and programming. You will be given a picture with a main-character and a path which this character wants to follow. To the right of this picture there will be given four different options of instructions. One of those instructions will match the given scenario and this is the instruction you have to find.</p>
+
         <p align = "left">Before starting the test, we are going to see three examples so you can familiarise yourself with the kind of questions that you will find, and the characters that will appear.</p>
-      
+
       <img src="../mturk-timing-test/images/Characters_ex3.PNG" alt="Char picture" width="500" ></img>
-      
+
       <hr>
-      
+
     <p align = "left"><b>Example 1</b></p>
       <p align = "left">In the first example you are asked which instructions take 'Pac-Man' to the ghost by the path marked out. That is to take 'Pac-Man' EXACTLY to the square where the ghost is (without going over or stopping short), and strictly following the path marked in yellow (without touching the walls, represented by the orange squares).</p>
     <img src="../mturk-timing-test/images/exmpl1_ex3.PNG" alt="Sample picture1" width="690" ></img>
      <p align = "left">The correct answer is (B).</p>
     <p> <br /> </p>
-    
+
     <p align = "left"><b>Example 2</b></p>
       <p align = "left">In the second example you are asked again which instructions take 'Pac-Man' to the ghost by the path marked out. However, in this question the options are presented as groups of instruction blocks rather than arrows.</p>
     <p align = "left">Remember that the question asks you to take 'Pac-Man' EXACTLY to the square where the ghost is, and strictly following the path marked in yellow.</p>
@@ -475,72 +416,120 @@
      <p align = "left">The correct answer is (A).</p>
 
 <p><br /></p>
-      <button onclick="_s.button(),hideR3()">Start the quiz</button>
+      <button onclick="_s.button()">Start the quiz</button>
 <p> <br /> </p>
     </div>
 
-  <div class="slide" id="exercise3">
-        <form name="quiz">
-        <div id = "questionDIV3">
-    	   <p align = "left"><b>1.</b> <img src="images/exercise3_1.png" height="400" width="800"> <br />
-            <b>(A)</b> Option A <br />
-            <b>(B)</b> Option B <br />
-            <b>(C)</b> Option C <br />
-            <b>(D)</b> Option D <br />
-           </p>
-            <ul style="margin-top: 1pt">
-                <input type="radio" name="q1" value="A: Option A">A
-                <input type="radio" name="q1" value="B: Option B">B
-                <input type="radio" name="q1" value="C: Option C">C
-                <input type="radio" name="q1" value="D: Option D">D
-            </ul>
+    <div class="slide" id="q3_1">
+     <form name="q3_1">
 
-            <hr>
-
-        <p align = "left"><b>2.</b> <img src="images/exercise3_2.png" height="400" width="800"> <br />
-           <b>(A)</b> Option A <br />
-           <b>(B)</b> Option B <br />
-           <b>(C)</b> Option C <br />
-           <b>(D)</b> Option D <br />
-          </p>
-           <ul style="margin-top: 1pt">
-               <input type="radio" name="q2" value="A: Option A">A
-               <input type="radio" name="q2" value="B: Option B">B
-               <input type="radio" name="q2" value="C: Option C">C
-               <input type="radio" name="q2" value="D: Option D">D
-           </ul>
-
-            <hr>
-
-        <p align = "left"><b>3.</b> <img src="images/exercise3_3.png" height="400" width="800"> <br />
-           <b>(A)</b> Option A <br />
-           <b>(B)</b> Option B <br />
-           <b>(C)</b> Option C <br />
-           <b>(D)</b> Option D <br />
-          </p>
-           <ul style="margin-top: 1pt">
-               <input type="radio" name="q3" value="A: Option A">A
-               <input type="radio" name="q3" value="B: Option B">B
-               <input type="radio" name="q3" value="C: Option C">C
-               <input type="radio" name="q3" value="D: Option D">D
-           </ul>
-
-           <hr>
-
-        <p align = "left"><b>4.</b> <img src="images/exercise3_4.png" height="400" width="800"> <br />
-           <b>(A)</b> Option A <br />
-           <b>(B)</b> Option B <br />
-           <b>(C)</b> Option C <br />
-           <b>(D)</b> Option D <br />
-          </p>
+       <p align = "left"><b>1.</b> <img src="images/exercise3_1.png" height="400" width="800"> <br />
+          <b>(A)</b> Option A <br />
+          <b>(B)</b> Option B <br />
+          <b>(C)</b> Option C <br />
+          <b>(D)</b> Option D <br />
+         </p>
+         <div id = "questionDIV3_1">
           <ul style="margin-top: 1pt">
-              <input type="radio" name="q4" value="A: Option A">A
-              <input type="radio" name="q4" value="B: Option B">B
-              <input type="radio" name="q4" value="C: Option C">C
-              <input type="radio" name="q4" value="D: Option D">D
-           </ul>
+              <input type="radio" name="q1" value="A: Option A" onclick = "myFunctionClick3_1()">A
+              <input type="radio" name="q1" value="B: Option B" onclick = "myFunctionClick3_1()">B
+              <input type="radio" name="q1" id="C: Option C" onclick = "myFunctionClick3_1()">C
+              <input type="radio" name="q1" value="D: Option D" onclick = "myFunctionClick3_1()">D
+          </ul>
+      </div>
+    <p id="text3_1" style="display:none">Correct!</p>
+    <p id="textf3_1" style="display:none">No, the correct answer is C.</p>
+    <button type="button" id = "showAnswer3" onclick="myFunctionAnswer3_1(),hideQ_showR3_1();" disabled = "disabled">Check Answer</button>
 
            <hr>
+
+     </form>
+     <button type = "button" id ="continue3" onclick="_s.button()" disabled = "disabled">Continue</button>
+    </div>
+
+    <div class="slide" id="q3_2">
+    <form name="q3_2">
+
+      <p align = "left"><b>2.</b> <img src="images/exercise3_2.png" height="400" width="800"> <br />
+         <b>(A)</b> Option A <br />
+         <b>(B)</b> Option B <br />
+         <b>(C)</b> Option C <br />
+         <b>(D)</b> Option D <br />
+        </p>
+        <div id = "questionDIV3_2">
+         <ul style="margin-top: 1pt">
+             <input type="radio" name="q2" value="A: Option A" onclick = "myFunctionClick3_2()">A
+             <input type="radio" name="q2" value="B: Option B" onclick = "myFunctionClick3_2()">B
+             <input type="radio" name="q2" value="C: Option C" onclick = "myFunctionClick3_2()">C
+             <input type="radio" name="q2" id="D: Option D" onclick = "myFunctionClick3_2()">D
+         </ul>
+     </div>
+    <p id="text3_2" style="display:none">Correct!</p>
+    <p id="textf3_2" style="display:none">No, the correct answer is D.</p>
+    <button type="button" id = "showAnswer3_2" onclick="myFunctionAnswer3_2(),hideQ_showR3_2();" disabled = "disabled">Check Answer</button>
+
+          <hr>
+
+    </form>
+    <button type = "button" id ="continue3_2" onclick="_s.button()" disabled = "disabled">Continue</button>
+    </div>
+
+    <div class="slide" id="q3_3">
+    <form name="q3_3">
+
+      <p align = "left"><b>3.</b> <img src="images/exercise3_3.png" height="400" width="800"> <br />
+         <b>(A)</b> Option A <br />
+         <b>(B)</b> Option B <br />
+         <b>(C)</b> Option C <br />
+         <b>(D)</b> Option D <br />
+        </p>
+        <div id = "questionDIV3_3">
+         <ul style="margin-top: 1pt">
+             <input type="radio" name="q3" value="A: Option A" onclick = "myFunctionClick3_3()">A
+             <input type="radio" name="q3" value="B: Option B" onclick = "myFunctionClick3_3()">B
+             <input type="radio" name="q3" value="C: Option C" onclick = "myFunctionClick3_3()">C
+             <input type="radio" name="q3" id="D: Option D" onclick = "myFunctionClick3_3()">D
+         </ul>
+    </div>
+    <p id="text3_3" style="display:none">Correct!</p>
+    <p id="textf3_3" style="display:none">No, the correct answer is D.</p>
+    <button type="button" id = "showAnswer3_3" onclick="myFunctionAnswer3_3(),hideQ_showR3_3();" disabled = "disabled">Check Answer</button>
+
+         <hr>
+
+    </form>
+    <button type = "button" id ="continue3_3" onclick="_s.button()" disabled = "disabled">Continue</button>
+    </div>
+
+    <div class="slide" id="q3_4">
+    <form name="q3_4">
+
+      <p align = "left"><b>4.</b> <img src="images/exercise3_4.png" height="400" width="800"> <br />
+         <b>(A)</b> Option A <br />
+         <b>(B)</b> Option B <br />
+         <b>(C)</b> Option C <br />
+         <b>(D)</b> Option D <br />
+        </p>
+        <div id = "questionDIV3_4">
+        <ul style="margin-top: 1pt">
+            <input type="radio" name="q4" value="A: Option A" onclick = "myFunctionClick3_4()">A
+            <input type="radio" name="q4" id="B: Option B" onclick = "myFunctionClick3_4()">B
+            <input type="radio" name="q4" value="C: Option C" onclick = "myFunctionClick3_4()">C
+            <input type="radio" name="q4" value="D: Option D" onclick = "myFunctionClick3_4()">D
+         </ul>
+    </div>
+    <p id="text3_4" style="display:none">Correct!</p>
+    <p id="textf3_4" style="display:none">No, the correct answer is B.</p>
+    <button type="button" id = "showAnswer3_4" onclick="myFunctionAnswer3_4(),hideQ_showR3_4();" disabled = "disabled">Check Answer</button>
+
+         <hr>
+
+    </form>
+    <button type = "button" id ="continue3_4" onclick="_s.button()" disabled = "disabled">Continue</button>
+    </div>
+
+    <div class="slide" id="q3_5">
+    <form name="q3_5">
 
       <p align = "left"><b>5.</b> <img src="images/exercise3_5.png" height="400" width="800"> <br />
           <b>(A)</b> Option A <br />
@@ -548,106 +537,23 @@
           <b>(C)</b> Option C <br />
           <b>(D)</b> Option D <br />
          </p>
+         <div id = "questionDIV3_5">
           <ul style="margin-top: 1pt">
-              <input type="radio" name="q5" value="A: Option A">A
-              <input type="radio" name="q5" value="B: Option B">B
-              <input type="radio" name="q5" value="C: Option C">C
-              <input type="radio" name="q5" value="D: Option D">D
+              <input type="radio" name="q5" value="A: Option A" onclick = "myFunctionClick3_5()">A
+              <input type="radio" name="q5" value="B: Option B" onclick = "myFunctionClick3_5()">B
+              <input type="radio" name="q5" id="C: Option C" onclick = "myFunctionClick3_5()">C
+              <input type="radio" name="q5" value="D: Option D" onclick = "myFunctionClick3_5()">D
           </ul>
-
-          <hr>
-
-     <p align = "left"><b>6.</b> <img src="images/exercise3_6.png" height="400" width="800"> <br />
-         <b>(A)</b> Option A <br />
-         <b>(B)</b> Option B <br />
-         <b>(C)</b> Option C <br />
-         <b>(D)</b> Option D <br />
-        </p>
-         <ul style="margin-top: 1pt">
-             <input type="radio" name="q6" value="A: Option A">A
-             <input type="radio" name="q6" value="B: Option B">B
-             <input type="radio" name="q6" value="C: Option C">C
-             <input type="radio" name="q6" value="D: Option D">D
-        </ul>
-
-        <hr>
-
-      <p align = "left"><b>7.</b> <img src="images/exercise3_7.png" height="400" width="800"> <br />
-         <b>(A)</b> Option A <br />
-         <b>(B)</b> Option B <br />
-         <b>(C)</b> Option C <br />
-         <b>(D)</b> Option D <br />
-        </p>
-         <ul style="margin-top: 1pt">
-            <input type="radio" name="q7" value="A: Option A">A
-            <input type="radio" name="q7" value="B: Option B">B
-            <input type="radio" name="q7" value="C: Option C">C
-            <input type="radio" name="q7" value="D: Option D">D
-           </ul>
-
-           <hr>
-
-      <p align = "left"><b>8.</b> <img src="images/exercise3_8.png" height="400" width="800"> <br />
-          <b>(A)</b> Step A <br />
-          <b>(B)</b> Step B <br />
-          <b>(C)</b> Step C <br />
-          <b>(D)</b> Step D <br />
-         </p>
-          <ul style="margin-top: 1pt">
-              <input type="radio" name="q8" value="A: Step A">A
-              <input type="radio" name="q8" value="B: Step B">B
-              <input type="radio" name="q8" value="C: Step C">C
-              <input type="radio" name="q8" value="D: Step D">D
-         </ul>
+    </div>
+    <p id="text3_5" style="display:none">Correct!</p>
+    <p id="textf3_5" style="display:none">No, the correct answer is C.</p>
+    <button type="button" id = "showAnswer3_5" onclick="myFunctionAnswer3_5(),hideQ_showR3_5();" disabled = "disabled">Check Answer</button>
 
          <hr>
-      <p align = "left"><b>9.</b> <img src="images/exercise3_9.png" height="400" width="800"> <br />
-        <b>(A)</b> Option A <br />
-        <b>(B)</b> Option B <br />
-        <b>(C)</b> Option C <br />
-        <b>(D)</b> Option D <br />
-       </p>
-        <ul style="margin-top: 1pt">
-            <input type="radio" name="q9" value="A: Option A">A
-            <input type="radio" name="q9" value="B: Option B">B
-            <input type="radio" name="q9" value="C: Option C">C
-            <input type="radio" name="q9" value="D: Option D">D
-          </ul>
 
-          <hr>
-
-      <p align = "left"><b>10.</b> <img src="images/exercise3_10.png" height="400" width="800"> <br />
-         <b>(A)</b> Option A <br />
-         <b>(B)</b> Option B <br />
-         <b>(C)</b> Option C <br />
-         <b>(D)</b> Option D <br />
-        </p>
-         <ul style="margin-top: 1pt">
-             <input type="radio" name="q10" value="A: Option A">A
-             <input type="radio" name="q10" value="B: Option B">B
-             <input type="radio" name="q10" value="C: Option C">C
-             <input type="radio" name="q10" value="D: Option D">D
-          </ul>
-
-          <hr>
-            <p>Only click "Get score" if you have answered all the questions!</p>
-            <input type="button" value="Get score" onClick="hideQ_showR3(); getScore2(this.form)">
-            <p> <br /> </p>
-        </div>
-            <div id = "scoreDIV3">
-            <p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
-                Correct answers:<br>
-                <textarea class="bgclr" name="solutions" wrap="virtual" rows="11" cols="70" disabled>
-                </textarea>
-                </p>
-             </div>
-             </form>
-          <div id = "continueDIV3">
-           <button onclick="_s.button()">Continue</button>
-              <p> <br /> </p>
-          </div>
-        </div>
-
+    </form>
+    <button type = "button" id ="continue3_5" onclick="_s.button()" disabled = "disabled">Continue</button>
+    </div>
 
 
   <div class="slide"  id="subj_info">
@@ -717,3 +623,51 @@
 
 </body>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+
+<label for="myCheck">Multiple choice example</label>
+
+
+         <ul style="margin-top: 1pt">
+             <input type="radio" id="q10a" name="A" onclick = "myFunctionClick()">A
+             <input type="radio" id="q10b" name="B" onclick = "myFunctionClick()">B
+             <input type="radio" id="q10c" name="C" onclick = "myFunctionClick()">C
+             <input type="radio" id="q10d" name ="D" onclick = "myFunctionClick()">D
+          </ul>
+
+
+
+<p id="text" style="display:none">Correct!</p>
+<p id="textf" style="display:none">No, the correct answer is D.</p>
+<button type="button" id = "showAnswer" onclick="myFunctionAnswer(); myFunctionScore()" disabled = "disabled">Click Me!</button>
+
+<script>
+
+var score = 0;
+function myFunctionAnswer() {
+  var answer10 = document.getElementById("q10d");
+  if (answer10.checked == true){
+    text.style.display = "block";
+    score = score + 1;
+  } else {
+     textf.style.display = "block";
+  }
+}
+
+print(score);
+function myFunctionClick(){
+  var button = document.getElementById("showAnswer");
+   button.disabled = false;
+}
+
+
+</script>
+
+</body>
+</html>
+ -->
