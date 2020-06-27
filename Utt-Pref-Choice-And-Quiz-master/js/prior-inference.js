@@ -917,7 +917,10 @@ slides.q1_2 = slide({
         "time_in_minutes": (Date.now() - exp.startT) / 60000,
         "score_quiz1": exp.score,
         "score_quiz2": exp.score2,
-        "score_quiz3": exp.score3
+        "score_quiz3": exp.score3,
+        "answers_quiz1": exp.answers1,
+        "answers_quiz2": exp.answers2,
+        "answers_quiz3": exp.answers3
       };
       setTimeout(function () { turk.submit(exp.data); }, 1000);
     }
@@ -978,6 +981,9 @@ function init() {
 
 
   exp.data_trials = [];
+  exp.answers1 = [];
+  exp.answers2 = [];
+  exp.answers3 = [];
   //make corresponding slides:
   exp.slides = make_slides(exp);
 
@@ -1030,8 +1036,10 @@ function hideQ_showR1_2() {
   var x = document.getElementById("questionDIV1_2");
   var y = document.getElementById("showAnswer1_2");
 
+
     x.style.display = "none";
     y.style.display = "none";
+    
 
 }
 function hideQ_showR1_3() {
@@ -1044,7 +1052,7 @@ function hideQ_showR1_3() {
 }
 function hideQ_showR1_4() {
   var x = document.getElementById("questionDIV1_4");
-  var y = document.getElementById("showAnswer1_3");
+  var y = document.getElementById("showAnswer1_4");
 
     x.style.display = "none";
     y.style.display = "none";
@@ -1052,7 +1060,7 @@ function hideQ_showR1_4() {
 }
 function hideQ_showR1_5() {
   var x = document.getElementById("questionDIV1_5");
-  var y = document.getElementById("showAnswer1_3");
+  var y = document.getElementById("showAnswer1_5");
 
     x.style.display = "none";
     y.style.display = "none";
@@ -1165,62 +1173,132 @@ function myFunctionClick1_5(){
 }
 var Score = 0;
 function myFunctionAnswer1_1() {
-  var answer = document.getElementById("D: ORATION is to CHAT as BANQUET is to snack");
+  var answer = document.getElementById("D_11");
   var cont = document.getElementById("continue");
 
   if (answer.checked == true){
     text1_1.style.display = "block";
 	Score = Score + 1;
+    exp.answers1.push("D");
   } else {
      textf1_1.style.display = "block";
+      
+      answer = document.getElementById("A_11");
+              if (answer.checked == true){
+              exp.answers1.push("A");
+              };
+      answer = document.getElementById("B_11");
+              if (answer.checked == true){
+                  exp.answers1.push("B");
+              };
+      answer = document.getElementById("C_11");
+              if (answer.checked == true){
+                  exp.answers1.push("C");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer1_2(){
-	var answer = document.getElementById("C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant");
+	var answer = document.getElementById("C_12");
   var cont = document.getElementById("continue1_2");
 
   if (answer.checked == true){
     text1_2.style.display = "block";
 	Score = Score + 1;
+      exp.answers1.push("C");
   } else {
      textf1_2.style.display = "block";
+      
+         answer = document.getElementById("A_12");
+              if (answer.checked == true){
+              exp.answers1.push("A");
+              };
+      answer = document.getElementById("B_12");
+              if (answer.checked == true){
+                  exp.answers1.push("B");
+              };
+      answer = document.getElementById("D_12");
+              if (answer.checked == true){
+                  exp.answers1.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer1_3(){
-	var answer = document.getElementById("C: WHEAT is to FLOUR as GRAPE is to wine");
+	var answer = document.getElementById("C_13");
   var cont = document.getElementById("continue1_3");
 
   if (answer.checked == true){
     text1_3.style.display = "block";
 	Score = Score + 1;
+    exp.answers1.push("C");
   } else {
      textf1_3.style.display = "block";
+      
+      answer = document.getElementById("A_13");
+              if (answer.checked == true){
+              exp.answers1.push("A");
+              };
+      answer = document.getElementById("B_13");
+              if (answer.checked == true){
+                  exp.answers1.push("B");
+              };
+      answer = document.getElementById("D_13");
+              if (answer.checked == true){
+                  exp.answers1.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer1_4(){
-	var answer = document.getElementById("D: COMMON is to IRON as RARE is to diamond");
+	var answer = document.getElementById("D_14");
   var cont = document.getElementById("continue1_4");
 
   if (answer.checked == true){
     text1_4.style.display = "block";
 	Score = Score + 1;
+      exp.answers1.push("D");
   } else {
      textf1_4.style.display = "block";
+      
+      answer = document.getElementById("A_14");
+              if (answer.checked == true){
+              exp.answers1.push("A");
+              };
+      answer = document.getElementById("B_14");
+              if (answer.checked == true){
+                  exp.answers1.push("B");
+              };
+      answer = document.getElementById("C_14");
+              if (answer.checked == true){
+                  exp.answers1.push("C");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer1_5(){
-	var answer = document.getElementById("D: VICTORY is to CONTEST as KNOWLEDGE is to study");
+	var answer = document.getElementById("D_15");
   var cont = document.getElementById("continue1_5");
 
   if (answer.checked == true){
     text1_5.style.display = "block";
 	Score = Score + 1;
+    exp.answers1.push("D");
   } else {
      textf1_5.style.display = "block";
+      
+      answer = document.getElementById("A_15");
+              if (answer.checked == true){
+              exp.answers1.push("A");
+              };
+      answer = document.getElementById("B_15");
+              if (answer.checked == true){
+                  exp.answers1.push("B");
+              };
+      answer = document.getElementById("C_15");
+              if (answer.checked == true){
+                  exp.answers1.push("C");
+              };
   }
   cont.disabled = false;
 }
@@ -1248,62 +1326,132 @@ function myFunctionClick2_5(){
 }
 var Score2 = 0;
 function myFunctionAnswer2_1() {
-  var answer = document.getElementById("B: STOVE:KITCHEN :: sink:bathroom");
+  var answer = document.getElementById("B_21");
   var cont = document.getElementById("continue2");
 
   if (answer.checked == true){
     text2_1.style.display = "block";
 	Score2 = Score2 + 1;
+      exp.answers2.push("B");
   } else {
      textf2_1.style.display = "block";
+      
+      answer = document.getElementById("A_21");
+              if (answer.checked == true){
+              exp.answers2.push("A");
+              };
+      answer = document.getElementById("C_21");
+              if (answer.checked == true){
+                  exp.answers2.push("C");
+              };
+      answer = document.getElementById("D_21");
+              if (answer.checked == true){
+                  exp.answers2.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer2_2(){
-	var answer = document.getElementById("C: CELEBRATE:MARRIAGE :: lament:bereavement");
+	var answer = document.getElementById("C_22");
   var cont = document.getElementById("continue2_2");
 
   if (answer.checked == true){
     text2_2.style.display = "block";
 	Score2 = Score2 + 1;
+    exp.answers2.push("C");
   } else {
      textf2_2.style.display = "block";
+      
+      answer = document.getElementById("A_22");
+              if (answer.checked == true){
+              exp.answers2.push("A");
+              };
+      answer = document.getElementById("B_22");
+              if (answer.checked == true){
+                  exp.answers2.push("B");
+              };
+      answer = document.getElementById("D_22");
+              if (answer.checked == true){
+                  exp.answers2.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer2_3(){
-	var answer = document.getElementById("C: MARIGARINE:BUTTER :: nylon:silk");
+	var answer = document.getElementById("C_23");
   var cont = document.getElementById("continue2_3");
 
   if (answer.checked == true){
     text2_3.style.display = "block";
 	Score2 = Score2 + 1;
+      exp.answers2.push("C");
   } else {
      textf2_3.style.display = "block";
+      
+      answer = document.getElementById("A_23");
+              if (answer.checked == true){
+              exp.answers2.push("A");
+              };
+      answer = document.getElementById("B_23");
+              if (answer.checked == true){
+                  exp.answers2.push("B");
+              };
+      answer = document.getElementById("D_23");
+              if (answer.checked == true){
+                  exp.answers2.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer2_4(){
-	var answer = document.getElementById("B: NEGLIGENT:REQUIREMENT :: remiss: duty");
+	var answer = document.getElementById("B_24");
   var cont = document.getElementById("continue2_4");
 
   if (answer.checked == true){
     text2_4.style.display = "block";
 	Score2 = Score2 + 1;
+      exp.answers2.push("B");
   } else {
      textf2_4.style.display = "block";
+      
+      answer = document.getElementById("A_24");
+              if (answer.checked == true){
+              exp.answers2.push("A");
+              };
+      answer = document.getElementById("C_24");
+              if (answer.checked == true){
+                  exp.answers2.push("C");
+              };
+      answer = document.getElementById("D_24");
+              if (answer.checked == true){
+                  exp.answers2.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer2_5(){
-	var answer = document.getElementById("C: GAZELLE:SWIFT :: swan:graceful");
+	var answer = document.getElementById("C_25");
   var cont = document.getElementById("continue2_5");
 
   if (answer.checked == true){
     text2_5.style.display = "block";
 	Score2 = Score2 + 1;
+      exp.answers2.push("C");
   } else {
      textf2_5.style.display = "block";
+      
+      answer = document.getElementById("A_25");
+              if (answer.checked == true){
+              exp.answers2.push("A");
+              };
+      answer = document.getElementById("B_25");
+              if (answer.checked == true){
+                  exp.answers2.push("B");
+              };
+      answer = document.getElementById("D_25");
+              if (answer.checked == true){
+                  exp.answers2.push("D");
+              };
   }
   cont.disabled = false;
 }
@@ -1332,165 +1480,135 @@ function myFunctionClick3_5(){
 }
 var Score3 = 0;
 function myFunctionAnswer3_1() {
-  var answer = document.getElementById("C: Option C");
+  var answer = document.getElementById("C_31");
   var cont = document.getElementById("continue3");
 
+    
   if (answer.checked == true){
     text3_1.style.display = "block";
 	Score3 = Score3 + 1;
+    exp.answers3.push("C");
   } else {
-     textf3_1.style.display = "block";
+      textf3_1.style.display = "block";
+      
+      answer = document.getElementById("A_31");
+              if (answer.checked == true){
+              exp.answers3.push("A");
+              };
+      answer = document.getElementById("B_31");
+              if (answer.checked == true){
+                  exp.answers3.push("B");
+              };
+      answer = document.getElementById("D_31");
+              if (answer.checked == true){
+                  exp.answers3.push("D");
+              };
+      
   }
   cont.disabled = false;
 }
 function myFunctionAnswer3_2(){
-	var answer = document.getElementById("D: Option D");
+	var answer = document.getElementById("D_32");
   var cont = document.getElementById("continue3_2");
 
   if (answer.checked == true){
     text3_2.style.display = "block";
 	Score3 = Score3 + 1;
+    exp.answers3.push("D");
   } else {
      textf3_2.style.display = "block";
+      
+      answer = document.getElementById("A_32");
+              if (answer.checked == true){
+              exp.answers3.push("A");
+              };
+      answer = document.getElementById("B_32");
+              if (answer.checked == true){
+                  exp.answers3.push("B");
+              };
+      answer = document.getElementById("C_32");
+              if (answer.checked == true){
+                  exp.answers3.push("C");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer3_3(){
-	var answer = document.getElementById("D: Option D");
+	var answer = document.getElementById("D_33");
   var cont = document.getElementById("continue3_3");
 
   if (answer.checked == true){
     text3_3.style.display = "block";
 	Score3 = Score3 + 1;
+      exp.answers3.push("D");
   } else {
      textf3_3.style.display = "block";
+      
+      answer = document.getElementById("A_33");
+              if (answer.checked == true){
+              exp.answers3.push("A");
+              };
+      answer = document.getElementById("B_33");
+              if (answer.checked == true){
+                  exp.answers3.push("B");
+              };
+      answer = document.getElementById("C_33");
+              if (answer.checked == true){
+                  exp.answers3.push("C");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer3_4(){
-	var answer = document.getElementById("B: Option B");
+	var answer = document.getElementById("B_34");
   var cont = document.getElementById("continue3_4");
 
   if (answer.checked == true){
     text3_4.style.display = "block";
 	Score3 = Score3 + 1;
+      exp.answers3.push("B");
   } else {
      textf3_4.style.display = "block";
+      
+      answer = document.getElementById("A_34");
+              if (answer.checked == true){
+              exp.answers3.push("A");
+              };
+      answer = document.getElementById("C_34");
+              if (answer.checked == true){
+                  exp.answers3.push("C");
+              };
+      answer = document.getElementById("D_34");
+              if (answer.checked == true){
+                  exp.answers3.push("D");
+              };
   }
   cont.disabled = false;
 }
 function myFunctionAnswer3_5(){
-	var answer = document.getElementById("C: Option C");
+	var answer = document.getElementById("C_35");
   var cont = document.getElementById("continue3_5");
 
   if (answer.checked == true){
     text3_5.style.display = "block";
 	Score3 = Score3 + 1;
+      exp.answers3.push("C");
   } else {
      textf3_5.style.display = "block";
+      
+      answer = document.getElementById("A_35");
+              if (answer.checked == true){
+              exp.answers3.push("A");
+              };
+      answer = document.getElementById("B_35");
+              if (answer.checked == true){
+                  exp.answers3.push("B");
+              };
+      answer = document.getElementById("D_35");
+              if (answer.checked == true){
+                  exp.answers3.push("D");
+              };
   }
   cont.disabled = false;
-}
-
-
-
-/// Score ///
-var numQues = 5;
-var numChoi = 4;
-var answers = new Array(5);
-
-answers[0] = "D: ORATION is to CHAT as BANQUET is to snack";
-answers[1] = "C: INCLEMENT is to CLEAR as PERTINENT is to irrelevant";
-answers[2] = "C: WHEAT is to FLOUR as GRAPE is to wine";
-answers[3] = "D: COMMON is to IRON as RARE is to diamond";
-answers[4] = "D: VICTORY is to CONTEST as KNOWLEDGE is to study";
-
-var answers2 = new Array(5);
-answers2[0] = "B: STOVE:KITCHEN :: sink:bathroom";
-answers2[1] = "C: CELEBRATE:MARRIAGE :: lament:bereavement";
-answers2[2] = "C: MARIGARINE:BUTTER :: nylon:silk";
-answers2[3] = "B: NEGLIGENT:REQUIREMENT :: remiss: duty";
-answers2[4] = "C: GAZELLE:SWIFT :: swan:graceful";
-
-var answers3 = new Array(5);
-answers3[0] = "C: Option C";
-answers3[1] = "D: Option D";
-answers3[2] = "D: Option D";
-answers3[3] = "B: Option B";
-answers3[4] = "C: Option C";
-
-function getScore(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers[i]) {
-          score++;
-          break;
-        }
-      }
-    }
-  }
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ". " + answers[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
-}
-
-function getScore1(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers2[i]) {
-          score++;
-          break;
-        }
-      }
-    }
-  }
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ". " + answers2[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
-}
-
-function getScore2(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers3[i]) {
-          score++;
-          break;
-        }
-      }
-    }
-  }
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ". " + answers3[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
 }
 
